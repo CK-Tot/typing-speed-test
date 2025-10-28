@@ -8,9 +8,37 @@
 </head>
 <body>
 
-    <div class="container">
+    <main class="container">
         <h1>Typing Speed Test</h1>
-    </div>
+
+        <section class="stats">
+
+            <article class="stat">
+                <span class="stat-label">Time</span>
+                <span class="stat-value" id="timer">60</span>
+            </article>
+
+            <article class="stat">
+                <span class="stat-label">WPM</span>
+                <span class="stat-value" id="timer">0</span>
+            </article>
+
+            <article class="stat">
+                <span class="stat-label">Accuracy</span>
+                <span class="stat-value" id="timer">100%</span>
+            </article>
+        </section>
+        <div class="quote-display" id="quote-display"></div>
+        <textarea name="" class="quote-input" id="quote-input" placeholder="Start typing here..." disabled></textarea>
+
+        <button id="start-btn">Start Test</button>
+
+        <section class="result" id="result">
+            <h2>Test Complete!</h2>
+            <div class="score" id="final-score"></div>
+            <button id="restart-btn">Try Again</button>
+        </section>
+    </main>
     
     <script src="app.js"></script>
 </body>
