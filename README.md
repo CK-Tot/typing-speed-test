@@ -105,4 +105,69 @@ function endGame() {
     clearInterval(timer);
     quoteInputEl.disabled = true;
 
-    const wordsTyped = correctCharacters /
+    const wordsTyped = correctCharacters / 5;
+    const wpm = Math.round(wordsTyped);
+    const accuracy = totalCharacters > 0 ? Math.round((correctCharacters / totalCharacters) * 100) : 100;
+
+    finalScoreEl.textContent = `${wpm} WPM with ${accuracy}% accuracy`;
+    resultEl.style.display = 'block';
+    startBtn.style.display = 'inline-block';
+}
+```
+
+### 🛠️ Technologies Used
+
+| Technology | Purpose |
+| :--- | :--- |
+| HTML5 | Structure and layout of the app |
+| CSS3 | Styling and visual feedback (correct/incorrect highlights) |
+| JavaScript (ES6) | Game logic, DOM manipulation, and interactivity |
+
+### 📁 Project Structure
+
+```
+typing-speed-test/
+│
+├── index.html         # Main structure of the app
+├── style.css          # Styling for layout and highlights
+├── script.js          # Game logic and interactivity
+└── README.md          # Documentation (this file)
+```
+
+### 🕹️ How to Play
+
+1.  Open `index.html` in your browser.
+2.  Click the **Start** button to begin the 60-second challenge.
+3.  Type the displayed quote accurately and quickly.
+4.  Check your WPM and accuracy when time runs out.
+5.  Click **Restart** to try again!
+
+### 🧠 Concepts Demonstrated
+
+* DOM manipulation (`getElementById`, `querySelectorAll`)
+* Event handling (`click`, `input`)
+* Timers using `setInterval` and `clearInterval`
+* Dynamic UI rendering and state management
+* Accuracy and performance calculations in real time
+
+### 🌟 Future Improvements
+
+* 💾 Save highest scores with Local Storage
+* 🌓 Add dark/light mode toggle
+* 🧮 Customizable test durations (30s, 60s, 120s)
+* 🏆 Online leaderboard
+* 🎧 Typing sound effects for feedback
+
+---
+
+### 👨‍💻 Author
+
+**C.K.**
+Front-End Developer & Creator of the Typing Speed Test App
+📫 Built with HTML, CSS, and JavaScript — combining learning, logic, and speed.
+
+### 📜 License
+
+This project is open source and available under the MIT License.
+
+⭐ If you like this project, don’t forget to star the repo!
